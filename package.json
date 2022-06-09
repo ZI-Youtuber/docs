@@ -1,24 +1,32 @@
 {
-  "name": "eleventy-on-glitch",
-  "description": "A starter template for 11ty (eleventy) static site generator on glitch.com",
-  "tags": [
-    "eleventy",
-    "11ty",
-    "ssr",
-    "static",
-    "glitch",
-    "template"
-  ],
-  "version": "1.0.0",
+  "name": "glitch-hello-eleventy",
+  "version": "0.1.0",
+  "description": "A simple blog, set up with Eleventy.",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve --port=$PORT"
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "eleventy-plugin-seo": "0.5.2",
+    "luxon": "^2.4.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-navigation": "^0.3.3"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-hello-eleventy"
+  },
+  "glitch": {
+    "projectType": "generated_static"
   },
   "license": "MIT",
-  "engines": {
-    "node": "16.x"
-  }
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }

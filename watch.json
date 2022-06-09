@@ -1,19 +1,15 @@
 {
   "install": {
     "include": [
-      "^package\\.json$",
-      "^\\.env$"
-    ]
+      "^package\\.json$"
+    ],
+    "exclude": []
   },
   "restart": {
-    "exclude": [
-      "^src/",
-      "^dist/"
-    ],
     "include": [
-      "watch.json$",
-      ".eleventy.js$"
-    ]
+      "^\\.env$"
+    ],
+    "exclude": ["\\.njk$", "\\.css$", "\\.md"]
   },
-  "throttle": 1000
+  "noSavedEvents": true
 }
