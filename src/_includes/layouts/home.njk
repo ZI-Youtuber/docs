@@ -1,127 +1,27 @@
-<head>
-  <meta charset="UTF-8">
-  
-  <title>{{ title }}</title>
-  <meta name="title" content="{{ title }}">
-  <meta name="description" content="{{ description }}">
+---
+layout: layouts/base.njk
+---
 
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Sargent Coding Docs" />
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-  {% if image %}
-    <meta property="og:image" content="{{ image }}">
-  {% endif %}
+{{
+  collections.all |
+  eleventyNavigation |
+  eleventyNavigationToHtml |
+  safe
+}}
 
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:site_name" content="Sargent Coding Docs" />
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
-  {% if image %}
-    <meta property="twitter:image" content="{{ image }}">
-  {% endif %}
-  
-  <meta name="theme-color" content="#2255dd" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-site-verification" content="Ezpz_9GMDJQ89Hk1mpeBhZmqM_ZYbYPTVVMJsMPD4is" />
-  
-  <link rel="stylesheet" href="/public/style.css" />
-  <link
-    rel="icon"
-    type="image/png"
-    href="https://cdn.glitch.me/dc38f52f-de50-4241-b0b3-d10b915c70ac%2FFrame%201%20(1).png"
-  />
-</head>
+<ul>
+  {%- for post in collections.design -%}
+    <li
+      {% if page.url == post.url %}
+        aria-current="page"
+      {% endif %}>
+      {{ post.data.page.date | htmlDateString }}
+      —
+      <a href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>
 
-<main>
-  <top>
-    <h1>{{ title }}</h1>
-  </top>
-  {{ content | safe }}
-  <details>
-    <summary>Community</summary>
-    <ul>
-      {%- for post in collections.community -%}
-        <li
-          {% if page.url == post.url %}
-            aria-current="page"
-          {% endif %}>
-          {{ post.data.page.date | htmlDateString }}
-          —
-          <a href="{{ post.url }}">
-            {{ post.data.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </details>
-  <details>
-    <summary>Accounts</summary>
-    <ul>
-      {%- for post in collections.accounts -%}
-        <li
-          {% if page.url == post.url %}
-            aria-current="page"
-          {% endif %}>
-          {{ post.data.page.date | htmlDateString }}
-          —
-          <a href="{{ post.url }}">
-            {{ post.data.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </details>
-  <details>
-    <summary>Jumblejot</summary>
-    <ul>
-      {%- for post in collections.jumblejot -%}
-        <li
-          {% if page.url == post.url %}
-            aria-current="page"
-          {% endif %}>
-          {{ post.data.page.date | htmlDateString }}
-          —
-          <a href="{{ post.url }}">
-            {{ post.data.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </details>
-  <details>
-    <summary>Drawlet</summary>
-    <ul>
-      {%- for post in collections.drawlet -%}
-        <li
-          {% if page.url == post.url %}
-            aria-current="page"
-          {% endif %}>
-          {{ post.data.page.date | htmlDateString }}
-          —
-          <a href="{{ post.url }}">
-            {{ post.data.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </details>
-  <details>
-    <summary>Harbooru</summary>
-    <ul>
-      {%- for post in collections.harbooru -%}
-        <li
-          {% if page.url == post.url %}
-            aria-current="page"
-          {% endif %}>
-          {{ post.data.page.date | htmlDateString }}
-          —
-          <a href="{{ post.url }}">
-            {{ post.data.title }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </details>
-</main>
+<script>var collections = {{ collections }}</script>
