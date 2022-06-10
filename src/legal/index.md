@@ -1,9 +1,9 @@
 ---
 {
   layout: "layouts/collection.njk",
-  title: "Design",
+  title: "Legal",
   eleventyNavigation: {
-    key: "Design"
+    key: "Legal"
   }
 }
 ---

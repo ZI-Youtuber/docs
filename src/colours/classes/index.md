@@ -1,9 +1,10 @@
 ---
 {
   layout: "layouts/collection.njk",
-  title: "Design",
+  title: "Classes",
   eleventyNavigation: {
-    key: "Design"
+    key: "Classes",
+    parent: "Colours"
   }
 }
 ---

@@ -15,9 +15,18 @@ layout: layouts/base.njk
   </div>
 
   <h1>{{ title }}</h1>
-  {% if date %}
-    <p>Last updated on {{ date | htmlDateString }}</p>
-  {% endif %}
-  
+
   {{ content | safe }}
+  {% if content %}
+  <p><hr></p>
+  {% endif %}
+
+  <h2>Some pages in this collection:</h2>
+
+  {{
+    collections.all |
+    eleventyNavigation(eleventyNavigation.key) |
+    eleventyNavigationToHtml |
+    safe
+  }}
 </main>

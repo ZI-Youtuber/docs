@@ -1,0 +1,145 @@
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #555;
+	font-family: IBM Plex Mono, monospace;
+  font-size: 0.9em;
+  line-height: 1.5em;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+	background-color: white;
+	padding: 1em;
+	margin: 1em 0;
+	overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code {
+	background: #eee;
+  border-radius: 8px;
+  padding: 2.5px 5px;
+  margin: 0 2.5px;
+  color: #555;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 0.9em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #aaa;
+	font-style: italic;
+}
+
+.token.namespace {
+	opacity: 0.75;
+}
+
+.token.string {
+	color: #f45;
+}
+
+.token.punctuation,
+.token.operator {
+	color: #555; /* no highlight */
+}
+
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.inserted {
+	color: #2bf;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-value,
+.language-autohotkey .token.selector,
+.language-json .token.boolean,
+.language-json .token.number,
+code[class*="language-css"] {
+	color: #17f;
+}
+
+.token.function {
+	color: #555;
+}
+
+.token.deleted,
+.language-autohotkey .token.tag {
+	color: #f45;
+}
+
+.token.selector,
+.language-autohotkey .token.keyword {
+	color: #17f;
+}
+
+.token.important {
+	color: #fc0;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.class-name,
+.language-json .token.property {
+	color: #2bf;
+}
+
+.token.tag,
+.token.selector {
+	color: #f45;
+}
+
+.token.attr-name,
+.token.property,
+.token.regex,
+.token.entity {
+	color: #f45;
+}
+
+.token.directive.tag .tag {
+	background: #fc0;
+	color: #555;
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers.line-numbers .line-numbers-rows {
+	border-right-color: #a5a5a5;
+}
+
+.line-numbers .line-numbers-rows > span:before {
+	color: #2B91AF;
+}
+
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight.line-highlight {
+	background: rgba(193, 222, 241, 0.2);
+	background: -webkit-linear-gradient(left, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+	background: linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+}

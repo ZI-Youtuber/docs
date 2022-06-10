@@ -1,6 +1,42 @@
-<link rel="stylesheet" href="https://website.spdblx.repl.co/docs.css">
+<link rel="stylesheet" href="/public/code.css">
+<link rel="stylesheet" href="/public/style.css">
 <script src="https://website.spdblx.repl.co/script.js" defer></script>
-<script src="https://website.spdblx.repl.co/cards.js" defer></script>
+
+<head>
+  <meta charset="UTF-8">
+  
+  <title>{{ title }}{% if title != "Sargent Coding Documentation" %} - Sargent Coding Documentation{% endif %}</title>
+  <meta name="title" content="{{ title }}{% if title != "Sargent Coding Documentation" %} - Sargent Coding Documentation{% endif %}">
+  <meta name="description" content="{{ description }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sargent Coding Documentation" />
+  <meta property="og:title" content="{{ title }}{% if title != "Sargent Coding Documentation" %} - Sargent Coding Documentation{% endif %}">
+  <meta property="og:description" content="{{ description }}">
+  {% if image %}
+    <meta property="og:image" content="{{ image }}">
+  {% endif %}
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site_name" content="Sargent Coding Documentation" />
+  <meta property="twitter:title" content="{{ title }}{% if title != "Sargent Coding Documentation" %} - Sargent Coding Documentation{% endif %}">
+  <meta property="twitter:description" content="{{ description }}">
+  {% if image %}
+    <meta property="twitter:image" content="{{ image }}">
+  {% endif %}
+  
+  <meta name="theme-color" content="#1177ff" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="Ezpz_9GMDJQ89Hk1mpeBhZmqM_ZYbYPTVVMJsMPD4is" />
+  
+  <link rel="stylesheet" href="/public/style.css" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://github.com/sargent-coding.png"
+  />
+</head>
 
 <nav>  
   <a id="logo" href="/">

@@ -1,0 +1,85 @@
+@import url("https://website.spdblx.repl.co/uwsl.css");
+
+main {
+  padding: 50px 100px 100px 100px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 18px;
+}
+
+main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+
+main h1 {
+  font-size: 3em;
+  margin: 0 0 2rem 0;
+  line-height: 1;
+}
+
+main h2 {
+  font-size: 1.5em;
+}
+
+main h3 {
+  font-size: 1.25em;
+}
+
+main h4 {
+  font-size: 1em;
+}
+
+main h5 {
+  font-size: 0.75em;
+}
+
+main h6 {
+  font-size: 0.5em;
+}
+
+main p, main ul, main ol, main pre {
+  margin: 1rem 0;
+  line-height: 2;
+}
+
+.docs-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 1.5em;
+  color: #aaa;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.docs-breadcrumbs a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.docs-breadcrumbs a:not([href]) {
+  color: black;
+}
+
+.tag {
+  border: 1.5px solid currentColor;
+  border-radius: 99px;
+  padding: 0.2em 0.5em;
+  color: #555;
+  font-size: 0.65em;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 0 50px 50px 50px;
+  }
+}
