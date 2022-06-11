@@ -3,8 +3,8 @@
   layout: "layouts/collection.njk",
   title: "Classes",
   eleventyNavigation: {
-    key: "colours-classes",
-    parent: "colours",
+    key: "icons-classes",
+    parent: "icons",
     title: "Classes"
   }
 }

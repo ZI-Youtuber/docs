@@ -5,6 +5,7 @@ main {
   margin: 0 auto;
   max-width: 800px;
   font-size: 18px;
+  line-height: 2;
 }
 
 main img {
@@ -17,6 +18,10 @@ main img {
 main h1, main h2, main h3, main h4, main h5, main h6 {
   font-weight: 600;
   margin: 2rem 0 1rem 0;
+}
+
+main h1 + h2, main h2 + h3, main m3 + h4, main h4 + h5, main h5 + h6 {
+  margin-top: 1rem;
 }
 
 main h1 {
@@ -47,7 +52,6 @@ main h6 {
 
 main p, main ul, main ol, main pre {
   margin: 1rem 0;
-  line-height: 2;
 }
 
 .docs-breadcrumbs {
@@ -69,13 +73,38 @@ main p, main ul, main ol, main pre {
   color: black;
 }
 
-.tag {
+.chip {
   border: 1.5px solid currentColor;
   border-radius: 99px;
   padding: 0.2em 0.5em;
   color: #555;
   font-size: 0.65em;
   vertical-align: middle;
+}
+
+try-it {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+try-it * {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  height: 40vh;
+  width: 100%;
+}
+
+try-it textarea {
+  border-bottom: 1px solid #aaa;
+  padding: 25px;
+  resize: vertical;
+}
+
+try-it iframe {
+  height: 100%;
 }
 
 @media only screen and (max-width: 600px) {

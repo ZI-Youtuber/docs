@@ -4,8 +4,9 @@
   title: "RGBA",
   description: "The RGBA class represents a colour made from red, green, and blue parameters. An optional alpha parameter changes the color's transparency.",
   eleventyNavigation: {
-    key: "RGBA",
-    parent: "Classes"
+    key: "colours-classes-rgba",
+    parent: "colours-classes",
+    title: "RGBA"
   }
 }
 ---
@@ -29,7 +30,7 @@ Number between 0 and 255.
 ### `blue`
 Number between 0 and 255.
 
-### `alpha` <span class="tag">Optional</span>
+### `alpha` <span class="chip">Optional</span>
 Number between 0 and 1.
 
 ## Parameters (class notation)

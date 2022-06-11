@@ -4,8 +4,9 @@
   title: "HEX",
   description: "The HEX class represents a hexadecimal notation for RGBA components (red, green, blue[, alpha]) written as hexadecimal numbers.",
   eleventyNavigation: {
-    key: "HEX",
-    parent: "Classes"
+    key: "colours-classes-hex",
+    parent: "colours-classes",
+    title: "HEX"
   }
 }
 ---

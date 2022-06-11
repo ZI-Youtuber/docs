@@ -5,8 +5,9 @@
   description: "The HSLA class represents a colour made from hue, saturation, and lightness parameters. An optional alpha parameter changes the color's transparency.
 ",
   eleventyNavigation: {
-    key: "HSLA",
-    parent: "Classes"
+    key: "colours-classes-hsla",
+    parent: "colours-classes",
+    title: "HSLA"
   }
 }
 ---
@@ -31,7 +32,7 @@ Number between 0 and 360.
 ### `blue`
 Number between 0 and 360.
 
-### `alpha` <span class="tag">Optional</span>
+### `alpha` <span class="chip">Optional</span>
 Number between 0 and 1.
 
 ## Parameters (class notation)

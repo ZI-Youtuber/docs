@@ -17,6 +17,8 @@ layout: layouts/base.njk
   <h1>{{ title }}</h1>
 
   {{ content | safe }}
+
+  {% if collections.all | eleventyNavigation(eleventyNavigation.key) | eleventyNavigationToHtml %}
   {% if content %}
   <p><hr></p>
   {% endif %}
@@ -29,4 +31,5 @@ layout: layouts/base.njk
     eleventyNavigationToHtml |
     safe
   }}
+{% endif %}
 </main>

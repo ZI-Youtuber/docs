@@ -3,7 +3,8 @@
   layout: "layouts/collection.njk",
   title: "Legal",
   eleventyNavigation: {
-    key: "Legal"
+    key: "Legal",
+    order: -1
   }
 }
 ---
